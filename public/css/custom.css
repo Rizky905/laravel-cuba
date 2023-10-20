@@ -1,0 +1,75 @@
+.logo-msig-login {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 110px;
+    height: 4%;
+}
+
+.logo-msig-sidebar {
+    width: 115px;
+    height: 40px;
+}
+
+.logo-msig-mini-sidebar {
+    width: 110px;
+    height: 35px;
+}
+
+.btn-msig-blue {
+    background: #1B1464;
+    color: #fff;
+}
+
+.btn-login {
+    background: #FF1F27;
+    color: #fff;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active,
+.btn-login.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #969696;
+    border-color: #969696;
+    /*set the color you want here*/
+}
+
+.btn-msig-blue:hover,
+.btn-msig-blue:focus,
+.btn-msig-blue:active,
+.btn-msig-blue.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #969696;
+    border-color: #969696;
+    /*set the color you want here*/
+}
+
+.badge-msig {
+    background-color: #1B1464;
+}
+
+.inputfile {
+    display: none;
+}
+
+.inputfile-box {
+    position: relative;
+}
+
+.file-box {
+    width: 100%;
+    padding: 5px 4px 30px 120px;
+}
+
+.file-button {
+    background: #e2e2e2;
+    color: #000000;
+    padding: 5px;
+    position: absolute;
+    border-radius: var(--bs-border-radius);
+    top: 0px;
+}
