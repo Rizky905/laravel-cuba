@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
-        {{-- @livewire('user-list', ['segmentName' => $segmentName]) --}}
+        
+        @livewire('index-web', ['segmentName' => $segmentName])
     </div>
 @endsection

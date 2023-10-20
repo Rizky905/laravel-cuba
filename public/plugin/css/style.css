@@ -29767,8 +29767,8 @@ footer {
 
 .common-card {
   background: #FCFCFD;
-  border: 2px solid #fff;
-  box-shadow: 0px 9px 20px rgba(46, 35, 94, 0.07);
+  border: 5px solid #fff;
+  box-shadow: 10px 10px 20px rgba(46, 35, 94, 0.07);
   border-radius: 10px;
 }
 

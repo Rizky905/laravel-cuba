@@ -6,36 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="icon" type="image/png" href="{{ url('/plugin/images/msig/logo_small2.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('/plugin/images/msig/logo_small2.png') }}">
 
     <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/vendors/icofont.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/vendors/icofont.css') }}">
 
     <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/vendors/themify.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/vendors/themify.css') }}">
 
     <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/css/flag-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/css/flag-icon.css') }}">
 
     <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/css/feather-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/css/feather-icon.css') }}">
 
     <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/css/bootstrap.css') }}">
 
     <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/custom.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/custom.css') }}">
 
     <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="{{ url('/plugin/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugin/css/responsive.css') }}">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-5">
-                <img class="bg-img-cover bg-center" src="{{ url('/plugin/images/login/2.jpg') }}" alt="looginpage">
+                <img class="bg-img-cover bg-center" src="{{ asset('/plugin/images/login/2.jpg') }}" alt="looginpage">
             </div>
             <div class="col-xl-7 p-0">
                 <div class="login-card login-dark">
@@ -43,9 +43,9 @@
                         <div>
                             <a class="logo text-start" href="index.html">
                                 <img class="img-fluid for-light logo-msig-login"
-                                    src="{{ url('/plugin/images/msig/logo.png') }}" alt="looginpage">
+                                    src="{{ asset('/plugin/images/msig/logo.png') }}" alt="looginpage">
                                 <img class="img-fluid for-dark logo-msig-login"
-                                    src="{{ url('/plugin/images/msig/logo.png') }}" alt="looginpage">
+                                    src="{{ asset('/plugin/images/msig/logo.png') }}" alt="looginpage">
                             </a>
                         </div>
 
@@ -80,13 +80,13 @@
 </body>
 
 <!-- latest jquery-->
-<script src="{{ url('/plugin/js/jquery.min.js') }}"></script>
+<script src="{{ asset('/plugin/js/jquery.min.js') }}"></script>
 
 <!-- Bootstrap js-->
-<script src="{{ url('/plugin/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('/plugin/js/bootstrap.bundle.min.js') }}"></script>
 
-<script src="{{ url('/plugin/js/config.js') }}"></script>
+<script src="{{ asset('/plugin/js/config.js') }}"></script>
 
-<script src="{{ url('/plugin/js/script.js') }}"></script>
+<script src="{{ asset('/plugin/js/script.js') }}"></script>
 
 </html>

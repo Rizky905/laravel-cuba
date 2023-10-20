@@ -2,9 +2,9 @@
     <div>
         <div class="logo-wrapper">
             <a href="index.html">
-                <img class="img-fluid for-light logo-msig-sidebar" src="{{ url('/plugin/images/msig/logo.png') }}"
+                <img class="img-fluid for-light logo-msig-sidebar" src="{{ asset('/plugin/images/msig/logo.png') }}"
                     alt="">
-                <img class="img-fluid for-dark logo-msig-sidebar" src="{{ url('/plugin/images/msig/logo.png') }}"
+                <img class="img-fluid for-dark logo-msig-sidebar" src="{{ asset('/plugin/images/msig/logo.png') }}"
                     alt="">
             </a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
@@ -13,7 +13,7 @@
 
         <div class="logo-icon-wrapper">
             <a href="index.html">
-                <img class="img-fluid logo-msig-mini-sidebar" src="{{ url('/plugin/images/msig/logo2.png') }}"
+                <img class="img-fluid logo-msig-mini-sidebar" src="{{ asset('/plugin/images/msig/logo2.png') }}"
                     alt="">
             </a>
         </div>
@@ -36,6 +36,18 @@
                         <div>
                             <h6>Pinned</h6>
                         </div>
+                    </li>
+
+                    <li class="sidebar-list">
+                        <i class="fa fa-thumb-tack"></i>
+                        <a class="sidebar-link sidebar-title link-nav {{ Request::segment(1) == 'dashboard' ? 'active' : '' }}"
+                            href="{{ url('/') }}">
+                            <svg class="stroke-icon">
+                            </svg>
+                            <svg class="fill-icon">
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
                     </li>
 
                     <li class="sidebar-main-title">
