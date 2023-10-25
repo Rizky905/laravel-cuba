@@ -17,6 +17,10 @@ use App\Http\Controllers\WebController;
 |
 */
 
+Route::get('/chatbot', function () {
+    return view('sections.chatbot');
+});
+
 Route::controller(AuthController::class)->group(function () {
     Route::get('/login', 'loginIndex')->name('login');
     Route::post('/login', 'loginPost')->name('post.login')->middleware('throttle:login');
