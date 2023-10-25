@@ -33,4 +33,25 @@ class WebController extends Controller
             return back();
         }
     }
+
+    public function Edit(Request $request)
+    {
+        $data = Web::findOrFail($request->id);
+        return view('sections.web.edit', compact('data'));
+    }
+
+    public function Update(PostRequest $request)
+    {
+        $validated = $request->validated();
+        if ($validated) {
+            $update = Web::findOrFail($request->id);
+            $update->update($request->validated());
+
+            flash()->addSuccess('Web created !');
+            return back();
+        } else {
+            flash()->addError('Something wrong !');
+            return back();
+        }
+    }
 }

@@ -12,8 +12,21 @@ class IndexWeb extends Component
 
     public $search;
     public $segmentName;
+    public $deleteId;
 
     protected $paginationTheme = 'bootstrap';
+
+    public function deleteId($id)
+    {
+        $this->deleteId = $id;
+    }
+
+    public function delete()
+    {
+        $data = Web::findOrFail($this->deleteId);
+        $data->delete();
+    }
+
 
     public function render()
     {

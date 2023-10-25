@@ -5,7 +5,7 @@
             <div class="page-title">
                 <div class="row">
                     <div class="col-6">
-                        <h4>Web</h4>
+                        <h4>User</h4>
                     </div>
                     <div class="col-6">
                         <ol class="breadcrumb">
@@ -16,7 +16,7 @@
                                 </a>
                             </li>
                             <li class="breadcrumb-item">Master Data</li>
-                            <li class="breadcrumb-item active">Web</li>
+                            <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div>
                 </div>
@@ -27,14 +27,17 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <form class="row g-3 needs-validation custom-input" action="{{ url('web') }}" method="POST"
-                                enctype="multipart/form-data" novalidate="">
+                            <form class="row g-3 needs-validation custom-input" action="{{ url('web/' . $data->id) }}"
+                                method="POST" enctype="multipart/form-data" novalidate="">
 
                                 @csrf
-                                <input type="hidden" name="form_name" value="create_web">
+                                @method('PUT')
+
+                                <input type="hidden" name="form_name" value="update_web">
                                 <div class="col-12">
                                     <label class="col-sm-12 col-form-label">Web Url</label>
-                                    <input class="form-control" type="text" name="url" required="">
+                                    <input class="form-control" type="text" name="url" value="{{ $data->url }}"
+                                        required="">
                                     <div class="invalid-feedback">Please enter your valid Web Url </div>
                                     <div>
                                         @error('url')
@@ -44,9 +47,10 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <label class="col-sm-12 col-form-label">Web Name</label>
-                                    <input class="form-control" type="text" name="name" required="">
-                                    <div class="invalid-feedback">Please enter your valid Web Name </div>
+                                    <label class="col-sm-12 col-form-label">Web name</label>
+                                    <input class="form-control" type="text" name="name" value="{{ $data->name }}"
+                                        required="">
+                                    <div class="invalid-feedback">Please enter valid Web name </div>
                                     <div>
                                         @error('name')
                                             <span class="text-danger">{{ $message }}</span>
@@ -56,7 +60,7 @@
 
                                 <div class="col-12">
                                     <label class="col-sm-12 col-form-label">Web Description</label>
-                                    <textarea name="description" id="" cols="5" rows="5" class="form-control" value=""></textarea>
+                                    <textarea name="description" id="" cols="5" rows="5" class="form-control">{{ $data->description }}</textarea>
                                     <div class="invalid-feedback">Please enter your valid Web Description </div>
                                     <div>
                                         @error('description')
@@ -67,7 +71,8 @@
 
                                 <div class="col-12">
                                     <label class="col-sm-12 col-form-label">Web PIC</label>
-                                    <input class="form-control" type="text" name="pic" required="">
+                                    <input class="form-control" type="text" name="pic" value="{{ $data->pic }}"
+                                        required="">
                                     <div class="invalid-feedback">Please enter your valid Web PIC </div>
                                     <div>
                                         @error('pic')
@@ -78,7 +83,8 @@
 
                                 <div class="col-12">
                                     <label class="col-sm-12 col-form-label">PIC Contact</label>
-                                    <input class="form-control" type="text" name="pic_contact" required="">
+                                    <input class="form-control" type="text" name="pic_contact"
+                                        value="{{ $data->pic_contact }}" required="">
                                     <div class="invalid-feedback">Please enter your valid PIC Contact </div>
                                     <div>
                                         @error('pic_contact')
@@ -88,7 +94,7 @@
                                 </div>
 
                                 <div class="col-12 mt-5 d-flex justify-content-end">
-                                    <button class="btn btn-login" type="submit">Submit</button>
+                                    <button class="btn btn-login" type="submit">Update</button>
                                 </div>
                             </form>
                         </div>

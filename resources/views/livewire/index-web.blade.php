@@ -7,18 +7,17 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="list-product list-category">
-                            <div class="table-responsive">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <input wire:model="search" type="text" class="form-control"
-                                            placeholder="search..">
-                                    </div>
-                                    <div>
-                                        <a class="btn btn-login" href="{{ url($segmentName . '/create') }}">
-                                            <i class="fa fa-plus"></i> Add Web
-                                        </a>
-                                    </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <input wire:model="search" type="text" class="form-control" placeholder="search..">
                                 </div>
+                                <div>
+                                    <a class="btn btn-login" href="{{ url($segmentName . '/create') }}">
+                                        <i class="fa fa-plus"></i> Add Web
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
                                 <table class="table light-card mt-5">
                                     <thead>
                                         <tr>
@@ -86,9 +85,9 @@
                     Are you sure want to delete this record ?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-msig-blue" data-bs-dismiss="modal">Close</button>
                     <button type="button" wire:click.prevent="delete()" data-bs-dismiss="modal"
-                        class="btn btn-secondary">Delete</button>
+                        class="btn btn-login">Delete</button>
                 </div>
             </div>
         </div>

@@ -18,3 +18,6 @@
   font-weight: normal;
   font-style: normal;
 }
+
+3. Optimize
+- php artisan optimize:clear

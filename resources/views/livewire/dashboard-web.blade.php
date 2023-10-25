@@ -20,8 +20,9 @@
     <section class="section-space feature-section pt-0 mt-4">
         <div class="container">
             <div class="row">
+
                 @foreach ($data as $item)
-                    <a class="col-xxl-3 col-lg-4 col-sm-6" href="{{$item->url}}" target="_blank">
+                    <a class="col-xxl-3 col-sm-4 mt-3" href="{{ $item->url }}" target="_blank">
                         <div class="feature-box common-card bg-feature-1">
                             <div>
                                 <h5>{{ $item->name }}</h5>
@@ -30,13 +31,14 @@
                                 </p>
                             </div>
                             <div class="text-end mt-5">
-                                <span>{{$item->pic}}</span>
-                                <span class="font-primary">{{$item->pic_contact}}</span>
+                                <span>{{ $item->pic }}</span>
+                                <span class="font-primary">{{ $item->pic_contact }}</span>
                             </div>
                         </div>
                     </a>
                 @endforeach
             </div>
         </div>
-    </section>
+</div>
+</section>
 </div>

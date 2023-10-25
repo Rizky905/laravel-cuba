@@ -23,23 +23,28 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-            'name' => 'required|max:100',
-            'url' => 'required|max:100',
-            'pic' => 'required|max:100',
-            'pic_contact' => 'required|max:255',
-            'description' => 'max:500',
-        ];
+        $formName = $this->get('form_name');
+        if ($formName == 'create_web' || 'update_web') {
+            return [
+                'name' => 'required|max:100',
+                'url' => 'required|max:100',
+                'pic' => 'required|max:100',
+                'pic_contact' => 'required|max:255',
+                'description' => 'max:500',
+            ];
+        }
     }
 
     public function messages()
     {
-        return [
-            'name.required' => 'Name is required!',
-            'url.required' => 'Url is required!',
-            'pic.required' => 'PIC is required!',
-            'pic_contact.required' => 'PIC Contact is required!',
-        ];
+        $formName = $this->get('form_name');
+        if ($formName == 'create_web' || 'update_web') {
+            return [
+                'name.required' => 'Name is required !',
+                'url.required' => 'Url is required !',
+                'pic.required' => 'PIC is required !',
+                'pic_contact.required' => 'PIC Contact is required !',
+            ];
+        }
     }
 }
