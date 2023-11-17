@@ -1,16 +1,21 @@
 # This development using .htacess
 
-# 1 set up the .htacess
+# 1. Installation
+- composer install
+- copy .env.example into .env
+- php artisan key:generate
+- php artisan migrate --seed 
+
+# 2 set up the .htacess
 - copy file .htaccess from public into root project folder
 - rename file serve.php into index.php
 
-
-# 2. config the livewire
+# 3. config the livewire
 - php artisan livewire:publish --config
 - - Setting file in config/livewire -> 'asset_url' => env('ASSET_URL', null),
 - php artisan livewire:publish --pagination
 
-# 2. config the font-awesome
+# 4. config the font-awesome
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
@@ -19,5 +24,8 @@
   font-style: normal;
 }
 
-3. Optimize
+# 5. Optimize
 - php artisan optimize:clear
+
+# 6. Add this at .env
+- ASSET_URL=http://localhost/laravel-cuba/public
